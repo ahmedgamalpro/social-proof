@@ -1,0 +1,265 @@
+
+/* Start Variables */
+:root{
+    --very-dark-magenta: hsl(300, 43%, 22%);
+    --soft-pink: hsl(333, 80%, 67%);
+    --dark-grayish-magenta: hsl(303, 10%, 53%);
+    --Light-grayish-magenta: hsl(300, 24%, 96%);
+    --white: hsl(0, 0%, 100%);
+}
+
+/* End Variables */
+
+/* Start Globals */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'League Spartan', sans-serif;
+    font-size: 15px;
+    overflow: hidden;
+}
+
+.container{
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+/* small */
+@media(min-width: 768px){
+    .container{
+        width: 768px;
+
+    }
+
+}
+/* meduem */
+@media(min-width: 992px){
+    .container{
+        width: 992px;
+        display: inline;
+    }
+    .top-bg{
+        background-image: url(../images/bg-pattern-top-desktop.svg);
+    }
+    .bottom-bg{
+        background-size: cover;
+        bottom: 0;
+        background-position: bottom;
+        background-image: url(../images/bg-pattern-bottom-desktop.svg);
+    }
+
+    .text-section .container{
+        padding-left: 20px;
+        position: relative;
+        top: 21px;
+        right: -9px;
+        
+    }
+    .text-section .container h1{
+        text-align: left;
+        font-size: 40px;
+        padding-left: 42px;
+    }
+    .text-section .container p{
+        text-align: left;
+        padding-left: 42px;
+    }
+    .review-section {
+        width: 40vw;
+        position: relative;
+        top: -70px;
+        right: -305px;
+    }
+    .review-section .container{
+        width: 40vw;
+        position: relative;
+        top: -292px;
+        right: -164px;
+    }
+    
+    .review-section .container .review:first-child{
+        position: relative;
+        top: 100px;
+        right: 100px;
+    }
+    .review-section .container .review:nth-child(2){
+        position: relative;
+        top: 106px;
+        right: -7px;
+    }
+
+    .review-section .container .review:last-child{
+        position: relative;
+        top: 117px;
+        right: -85px;
+    }
+    .cards-section{
+        position: relative;
+        top: -179px;
+        right: -1px;
+        
+    }
+    .cards-section .container{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 20px;
+        height: 0;
+    }
+    .cards-section .container .testimonial:first-child{
+        position: relative;
+        top: -61px;
+        right: 10px;
+    }
+    .cards-section .container .testimonial:nth-child(2){
+        position: relative;
+        top: -27px;
+        right: 10px;
+    }
+    .cards-section .container .testimonial:last-child{
+        position: relative;
+        top: 15px;
+        right: 10px;
+    }
+}
+/* large */
+@media(min-width: 1200px){
+    .container{
+        width: 1200px;
+    }
+
+}
+
+
+/* End Globals */
+.top-bg, .bottom-bg {
+    position: fixed;
+    background-repeat: no-repeat;
+}
+
+.top-bg{
+    background-image: url(../images/bg-pattern-top-mobile.svg);
+    background-size: contain;
+    width: 50vw;
+    height: 50vw;
+    top: 0;
+    left: 0;
+    background-position: top;
+}
+.bottom-bg{
+    width: 30vw;
+    height: 50vw;
+    background-image: url(../images/bg-pattern-bottom-mobile.svg);
+    background-position: bottom;
+    bottom: 0;
+    right: 0;
+    transform: rotateX(360deg);
+}
+/* Start Text Section */
+.text-section .container{
+    padding-top: 100px;
+    text-align: center;
+}
+
+.text-section .container h1{
+    color: var(--very-dark-magenta);
+    font-size: 30px;
+    font-weight: 700;
+    width: 342px;
+}
+.text-section .container p{
+    color: var(--dark-grayish-magenta);
+    font-size: 20px;
+    font-weight: 500;
+    width: 341px;
+} 
+
+/* End Text Section */
+/* Start Review Section */
+.review-section .container{
+    padding-top: 40px;
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    
+    
+}
+.review-section .container .review{
+    
+    color: var(--very-dark-magenta);
+    background-color: var(--Light-grayish-magenta);
+    text-align: center;
+    margin-bottom: 20px;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    border-radius: 5px;
+}
+.review-section .container .review .stars{
+    display: inline;
+    
+}
+.review-section .container .review p{
+    font-size: 15px;
+    font-weight: 600;
+    padding-top: 10px;
+}
+
+
+/* End Review Section */
+
+/* Start Cards Section  */
+
+.cards-section .container{
+    margin-top: 35px;
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    align-items: center;
+    
+}
+
+
+.cards-section .container .testimonial{
+    background-color: var(--very-dark-magenta);
+    margin-bottom: 20px;
+    height: 243px;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.cards-section .container .testimonial .datels{
+    position: relative;
+}
+.cards-section .container .testimonial .datels img{
+    border-radius: 50%;
+    width: 38px;
+    position: absolute;
+    top: 39px;
+    left: 26px;
+}
+.cards-section .container .testimonial .datels .name{
+    position: absolute;
+    top: 39px;
+    left: 81px;
+    color: var(--white);
+    font-weight: 500;
+}
+.cards-section .container .testimonial .datels .veri{
+    position: absolute;
+    top: 59px;
+    left: 81px;
+    color: var(--soft-pink);
+    font-weight: 400;
+}
+.cards-section .container .testimonial .qouts{
+    position: relative;
+    top: 117px;
+    width: 95%;
+    color: var(--white);
+    left: 10px;
+
+}
+/* End Cards Section  */
